@@ -1,0 +1,65 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://mhde2n8njs7s"
+path="res://.godot/imported/rick_and_morty_garage_fan_art.glb-3b8e6c6ce01ed33703bc4f3778db77c0.scn"
+
+[deps]
+
+source_file="res://rick_and_morty_garage_fan_art.glb"
+dest_files=["res://.godot/imported/rick_and_morty_garage_fan_art.glb-3b8e6c6ce01ed33703bc4f3778db77c0.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=2.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Cable-Dark/Cable-Dark_Cable-DarkMat_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Camera": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Ceiling/Ceiling_CeilingMat_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Floor/Floor_FloorMat_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Glass/Glass_InteriorMat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Interior/Interior_InteriorMat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Wall/Wall_WallMat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Window/Window_InteriorMat_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/48d2a000dcab42a4897fde3618521f73_fbx/RootNode/Wood/Wood_WoodMat_0": {
+"generate/physics": true
+}
+}
+}
+gltf/embedded_image_handling=1

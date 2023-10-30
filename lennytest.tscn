@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bktun2yt35iya"]
+
+[ext_resource type="PackedScene" uid="uid://11bdiml37nry" path="res://Assets/Characters/Lenny/Lenny2.glb" id="1_t58li"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Lenny2" parent="." instance=ExtResource("1_t58li")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0493867, 0, 0.0156238)
