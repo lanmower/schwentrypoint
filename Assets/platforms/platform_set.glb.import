@@ -1,0 +1,89 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dy0wlc7yfvuf6"
+path="res://.godot/imported/platform_set.glb-3607d8ae3c2736d35a1f5b9c5c997094.scn"
+
+[deps]
+
+source_file="res://Assets/platforms/platform_set.glb"
+dest_files=["res://.godot/imported/platform_set.glb-3607d8ae3c2736d35a1f5b9c5c997094.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=0.001
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Big/Platform_Big_Ground Light_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Big/Platform_Big_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Big_grass/Platform_Big_grass_Grass_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Big_grass/Platform_Big_grass_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Medium/Platform_Medium_Ground Light_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Medium/Platform_Medium_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Medium_b/Platform_Medium_b_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Medium_b_grass/Platform_Medium_b_grass_Grass_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Medium_b_grass/Platform_Medium_b_grass_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Medium_grass/Platform_Medium_grass_Grass_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Medium_grass/Platform_Medium_grass_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_small/Platform_small_Ground Light_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_small/Platform_small_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_small_b/Platform_small_b_Ground Light_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_small_b/Platform_small_b_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_small_b_grass/Platform_small_b_grass_Grass_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_small_b_grass/Platform_small_b_grass_Ground Light_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_small_b_grass/Platform_small_b_grass_Ground_0": {
+"generate/physics": true
+}
+}
+}
+gltf/embedded_image_handling=1

@@ -9,7 +9,10 @@ const vrm_meta_class = preload("./vrm_meta.gd")
 	ret.resource_name = "CLICK TO SEE METADATA"
 	return ret
 ).call()
-
+var gltf_document_load = GLTFDocument.new()
+var gltf_state_load = GLTFState.new()
+var error = gltf_document_load.append_from_file("res://teknopathv2.vrm", gltf_state_load)
+	
 @export_category("Springbone Settings")
 @export var update_secondary_fixed: bool = false
 @export var disable_colliders: bool = false

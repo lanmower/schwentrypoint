@@ -1,0 +1,87 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dm0mp3y4x7y36"
+path="res://.godot/imported/cgt_116_assignment_3_doric_pillars_environment.glb-ce7a783788542e30c208de5a43addb5d.scn"
+
+[deps]
+
+source_file="res://Assets/platforms/cgt_116_assignment_3_doric_pillars_environment.glb"
+dest_files=["res://.godot/imported/cgt_116_assignment_3_doric_pillars_environment.glb-ce7a783788542e30c208de5a43addb5d.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/fountain1/fountain1_lambert1_0": {
+"generate/physics": true,
+"physics/shape_type": 5
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric/pillar_doric_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric1/pillar_doric1_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric2/pillar_doric2_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric3/pillar_doric3_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric4/pillar_doric4_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric5/pillar_doric5_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric6/pillar_doric6_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric7/pillar_doric7_lambert1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc1/podium_disc1_lambert1_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc2/podium_disc2_lambert1_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc3/podium_disc3_lambert1_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc4/podium_disc4_lambert1_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc5/podium_disc5_lambert1_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_top1/podium_top1_lambert1_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
+gltf/embedded_image_handling=1

@@ -41,8 +41,8 @@ var SPEED = 0
 
 func _ready():
 	animTree.active = true
-	
-	set_physics_process(multiplayer.is_server())
+	#set_physics_process(multiplayer.is_server())
+	#$Mesh.set_mesh(load("res://teknopathv2.vrm"))
 	
 func _process(delta):
 	

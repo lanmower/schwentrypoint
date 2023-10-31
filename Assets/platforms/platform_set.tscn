@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dspud2psvh8vj"]
+
+[ext_resource type="PackedScene" uid="uid://dy0wlc7yfvuf6" path="res://Assets/platforms/platform_set.glb" id="1_snlg8"]
+
+[node name="platform_set" instance=ExtResource("1_snlg8")]
+
+[node name="Platform_Medium" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="0"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 2.13719, -0.390741, -6.65722)
+
+[node name="Platform_Medium_b" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="1"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 0.230798, -0.319263, -1.48956)
+
+[node name="Platform_Medium_b_grass" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="2"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 1.6102, -0.416974, -2.61716)
+
+[node name="Platform_Medium_grass" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="3"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 1.59722, -0.25717, 0.0368168)
+
+[node name="Platform_Big" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="4"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, -0.0044947, -0.843279, -3.51782)
+
+[node name="Platform_Big_grass" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="5"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 1.65436, -0.634575, -4.6914)
+
+[node name="Platform_Big_grass_Ground_0" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Big_grass" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 5.68434e-14, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode/Platform_Big_grass/Platform_Big_grass_Ground_0/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 5.68434e-14, 1, 0, 0, 0)
+
+[node name="Platform_small" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="6"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 1.24176e-09, -0.498554, 1.20264)
+
+[node name="Platform_small_b" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="7"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 0.881233, -0.700744, 1.79479)
+
+[node name="Platform_small_b_grass" parent="Sketchfab_model/9555bbcf68324ceca7db0f5db61a04ac_fbx/RootNode" index="8"]
+transform = Transform3D(500, 0, 0, 0, -8.14603e-05, 100, 0, -500, -1.62921e-05, 1.7132, -0.709244, 2.42974)
