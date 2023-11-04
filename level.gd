@@ -36,8 +36,9 @@ func add_player(id: int):
 	character.name = str(id)
 	$Players.add_child(character, true)
 
-
 func del_player(id: int):
 	if not $Players.has_node(str(id)):
 		return
 	$Players.get_node(str(id)).queue_free()
+
+

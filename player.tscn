@@ -188,13 +188,13 @@ nodes/MainState/position = Vector2(-240, 500)
 nodes/output/position = Vector2(240, 220)
 node_connections = [&"output", 0, &"CrouchStand", &"CrouchStand", 0, &"MainState", &"CrouchStand", 1, &"CrouchIdleWalk"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_px2ew"]
-radius = 0.365
-height = 1.5
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wh0lk"]
 radius = 0.365
 height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_px2ew"]
+radius = 0.365
+height = 1.5
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_hwwnj")
@@ -217,12 +217,6 @@ libraries = {
 
 [node name="HeadBone" type="Node3D" parent="Mesh"]
 transform = Transform3D(1, -2.27828e-10, -4.65661e-10, -1.93268e-12, 1, 2.32831e-10, 2.32831e-10, 0, 1, -0.00211901, 1.5323, -0.00170457)
-
-[node name="CamParent" type="SpringArm3D" parent="."]
-transform = Transform3D(2.195, 0, 0, 0, 2.195, 0, 0, 0, 2.195, 0.425538, 0.445913, -0.00125599)
-
-[node name="Camera3D" type="Camera3D" parent="CamParent"]
-transform = Transform3D(0.455581, 0, 0, 0, 0.455581, 0, 0, 0, 0.455581, 0.112882, 0.740744, 1.87861)
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_i602r")
@@ -267,7 +261,7 @@ transform = Transform3D(1, -1.11022e-16, 0, 0, 1, 9.31323e-10, 0, -9.31323e-10, 
 
 [node name="FPC" type="Camera3D" parent="Systems/Camera/FirstPersonCamera/BoneTransform"]
 unique_name_in_owner = true
-transform = Transform3D(-1, 8.88178e-16, -1.50996e-07, 7.77156e-16, 1, 9.31323e-10, 1.50996e-07, 9.31323e-10, -1, 0, -0.09, 0.23)
+transform = Transform3D(-1, 9.99201e-16, -1.50996e-07, 7.77156e-16, 1, 9.31323e-10, 1.50996e-07, 9.31323e-10, -1, 0, -0.09, 0.23)
 current = true
 near = 0.25
 
@@ -279,11 +273,11 @@ unique_name_in_owner = true
 [node name="CheckRayCast" type="Node3D" parent="Systems"]
 script = ExtResource("21_w777m")
 
-[node name="StandCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.999999, -0.000764732, -0.000910551, 0.000768308, 0.999992, 0.00394325, 0.000907535, -0.00394395, 0.999992, 0, 0.75, 0)
-shape = SubResource("CapsuleShape3D_px2ew")
-
 [node name="CrouchCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.850317, 0)
 shape = SubResource("CapsuleShape3D_wh0lk")
 disabled = true
+
+[node name="StandCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, -0.00114709, -0.00136584, 0.00115246, 1.49999, 0.00591488, 0.0013613, -0.00591592, 1.49999, 0, 1.10032, 0)
+shape = SubResource("CapsuleShape3D_px2ew")

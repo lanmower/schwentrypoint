@@ -4,8 +4,8 @@ extends CharacterBody3D
 @onready var camFpc := $%FPC
 @onready var camTpc := $%TPC
 
-const WALK_SPEED := 3.0
-const RUN_SPEED := 5.0
+const WALK_SPEED := 5.0
+const RUN_SPEED := 8.0
 const CROUCH_SPEED := 1.0
 const ACC = .08
 const FRIC = .1
@@ -43,7 +43,7 @@ func _ready():
 	animTree.active = true
 	#set_physics_process(multiplayer.is_server())
 	#$Mesh.set_mesh(load("res://teknopathv2.vrm"))
-	
+
 func _process(delta):
 	
 	animTree.set("parameters/CrouchStand/transition_request", ["crouch_to_stand","stand_to_crouch"][int(input.crouch)])
@@ -101,4 +101,11 @@ func _process(delta):
 	animTree.set("parameters/MainState/WalkRun/blend_position", (moveLength).length())
 	animTree.set("parameters/CrouchIdleWalk/blend_position", (moveLength).length())
 	move_and_slide()
-
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().get_class() == "CharacterBody3D":
+			collision.get_collider().velocity -= collision.get_normal()*10
+			
+	
+	
+	
