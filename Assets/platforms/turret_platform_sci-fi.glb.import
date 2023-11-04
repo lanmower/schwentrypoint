@@ -28,5 +28,11 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/f36bd88b6d92490ebb82a017bb8d2ebb_obj_cleaner_materialmerger_gles/Object_2": {
+"generate/physics": true
+}
+}
+}
 gltf/embedded_image_handling=1

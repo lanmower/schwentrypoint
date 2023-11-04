@@ -32,7 +32,8 @@ _subresources={
 "nodes": {
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/fountain1/fountain1_lambert1_0": {
 "generate/physics": true,
-"physics/shape_type": 5
+"import/skip_import": true,
+"physics/shape_type": 2
 },
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric/pillar_doric_lambert1_0": {
 "generate/physics": true
