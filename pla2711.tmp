@@ -1,0 +1,284 @@
+[gd_scene load_steps=48 format=3 uid="uid://cw8w6clmxedi6"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_hwwnj"]
+[ext_resource type="Script" path="res://player_input.gd" id="2_ju3m6"]
+[ext_resource type="PackedScene" uid="uid://dxiilm66xeeqs" path="res://teknopathv2.vrm" id="3_k26qi"]
+[ext_resource type="Animation" uid="uid://drgkf65ort3f4" path="res://Assets/Characters/Lenny/Clips/walking.res" id="4_srlrv"]
+[ext_resource type="Animation" uid="uid://ca4ihb6fdy0dg" path="res://Assets/Characters/Lenny/Clips/stand_to_crouch.res" id="5_pxo4c"]
+[ext_resource type="Animation" uid="uid://1sfxhpgxsgrc" path="res://Assets/Characters/Lenny/Clips/running.res" id="6_2f5vh"]
+[ext_resource type="Animation" uid="uid://p4d5j4tfu2lc" path="res://Assets/Characters/Lenny/Clips/right strafe.res" id="7_7igva"]
+[ext_resource type="Animation" uid="uid://b3s8silgcs4n0" path="res://Assets/Characters/Lenny/Clips/right strafe walk.res" id="8_gw1wh"]
+[ext_resource type="Animation" uid="uid://cp6a7am1gt5ff" path="res://Assets/Characters/Lenny/Clips/jump4fallland.res" id="9_cgw2g"]
+[ext_resource type="Animation" uid="uid://cunypry2wv115" path="res://Assets/Characters/Lenny/Clips/jump2standing.res" id="10_6hdcy"]
+[ext_resource type="Animation" uid="uid://d11ej4ee0i7fa" path="res://Assets/Characters/Lenny/Clips/jump2.res" id="11_y5kqv"]
+[ext_resource type="Animation" uid="uid://b85e840yf6evr" path="res://Assets/Characters/Lenny/Clips/jump1runnning.res" id="12_runlq"]
+[ext_resource type="Animation" uid="uid://baah61lhgul35" path="res://Assets/Characters/Lenny/Clips/idle5crouch.res" id="13_hpo50"]
+[ext_resource type="Animation" uid="uid://b5ipf5nnbio1d" path="res://Assets/Characters/Lenny/Clips/idle4fall.res" id="14_m02nb"]
+[ext_resource type="Animation" uid="uid://8tjvgpkf4l1p" path="res://Assets/Characters/Lenny/Clips/jump3down.res" id="15_2x80x"]
+[ext_resource type="Animation" uid="uid://dxra1gsi4hrm3" path="res://Assets/Characters/Lenny/Clips/idle3sad.res" id="15_mvr0i"]
+[ext_resource type="Animation" uid="uid://bbpopqat6w8t8" path="res://Assets/Characters/Lenny/Clips/idle1normal.res" id="16_mjlqo"]
+[ext_resource type="Animation" uid="uid://dvi1ady3dec02" path="res://Assets/Characters/Lenny/Clips/left strafe walk.res" id="17_orosm"]
+[ext_resource type="Animation" uid="uid://b1m8ehsajcc54" path="res://Assets/Characters/Lenny/Clips/idle2happy.res" id="17_x4ybn"]
+[ext_resource type="Animation" uid="uid://d1uy3eg5ivki0" path="res://Assets/Characters/Lenny/Clips/get_up.res" id="18_xn4tn"]
+[ext_resource type="Animation" uid="uid://b0iifl7727ibv" path="res://Assets/Characters/Lenny/Clips/crouch_walk.res" id="19_pg77y"]
+[ext_resource type="Animation" uid="uid://dfaw0abs2dwmt" path="res://Assets/Characters/Lenny/Clips/crouch_to_stand.res" id="20_xpori"]
+[ext_resource type="Script" path="res://Scripts/Camera.gd" id="21_0e8gg"]
+[ext_resource type="Script" path="res://Scripts/CheckRayCast.gd" id="21_w777m"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fb1vy"]
+properties/0/path = NodePath(".:player")
+properties/0/spawn = true
+properties/0/sync = false
+properties/0/watch = false
+properties/1/path = NodePath(".:position")
+properties/1/spawn = true
+properties/1/sync = true
+properties/1/watch = false
+properties/2/path = NodePath(".:velocity")
+properties/2/spawn = true
+properties/2/sync = true
+properties/2/watch = false
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_hoavk"]
+properties/0/path = NodePath(".:jumping")
+properties/0/spawn = false
+properties/0/sync = true
+properties/0/watch = false
+properties/1/path = NodePath(".:crouch")
+properties/1/spawn = true
+properties/1/sync = true
+properties/1/watch = false
+properties/2/path = NodePath(".:running")
+properties/2/spawn = true
+properties/2/sync = true
+properties/2/watch = false
+properties/3/path = NodePath(".:input_dir")
+properties/3/spawn = true
+properties/3/sync = true
+properties/3/watch = false
+properties/4/path = NodePath(".:direction")
+properties/4/spawn = true
+properties/4/sync = true
+properties/4/watch = false
+properties/5/path = NodePath("../Mesh:rotation")
+properties/5/spawn = true
+properties/5/sync = true
+properties/5/watch = false
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rde3y"]
+_data = {
+"crouch_to_stand": ExtResource("20_xpori"),
+"crouch_walk": ExtResource("19_pg77y"),
+"get_up": ExtResource("18_xn4tn"),
+"idle1normal": ExtResource("16_mjlqo"),
+"idle2happy": ExtResource("17_x4ybn"),
+"idle3sad": ExtResource("15_mvr0i"),
+"idle4fall": ExtResource("14_m02nb"),
+"idle5crouch": ExtResource("13_hpo50"),
+"jump1runnning": ExtResource("12_runlq"),
+"jump2": ExtResource("11_y5kqv"),
+"jump2standing": ExtResource("10_6hdcy"),
+"jump3down": ExtResource("15_2x80x"),
+"jump4fallland": ExtResource("9_cgw2g"),
+"left strafe walk": ExtResource("17_orosm"),
+"right strafe": ExtResource("7_7igva"),
+"right strafe walk": ExtResource("8_gw1wh"),
+"running": ExtResource("6_2f5vh"),
+"stand_to_crouch": ExtResource("5_pxo4c"),
+"walking": ExtResource("4_srlrv")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gfb8y"]
+animation = &"idle5crouch"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xb6p1"]
+animation = &"crouch_walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_hrc0h"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_gfb8y")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_xb6p1")
+blend_point_1/pos = 1.0
+min_space = 0.0
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_8covd"]
+xfade_time = 0.2
+input_0/name = "crouch_to_stand"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "stand_to_crouch"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4iin8"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xbflv"]
+animation = &"running"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8kdf4"]
+animation = &"idle1normal"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_gdufo"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_4iin8")
+blend_point_0/pos = 3.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_xbflv")
+blend_point_1/pos = 5.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_8kdf4")
+blend_point_2/pos = 0.0
+min_space = 0.0
+max_space = 5.0
+sync = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_moidd"]
+animation = &"idle4fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v0jik"]
+animation = &"jump3down"
+play_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ve68w"]
+animation = &"jump3down"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1p0xm"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"onFloor"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eq737"]
+xfade_time = 0.1
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8p3km"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"onAir"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k4tqh"]
+xfade_time = 0.2
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qfywl"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_kjveo"]
+states/End/position = Vector2(200, 358)
+states/Start/position = Vector2(219, 82)
+states/WalkRun/node = SubResource("AnimationNodeBlendSpace1D_gdufo")
+states/WalkRun/position = Vector2(454, 82)
+states/idle4fall/node = SubResource("AnimationNodeAnimation_moidd")
+states/idle4fall/position = Vector2(808, 191)
+states/jump3down/node = SubResource("AnimationNodeAnimation_ve68w")
+states/jump3down/position = Vector2(733, 82)
+"states/jump3down 2/node" = SubResource("AnimationNodeAnimation_v0jik")
+"states/jump3down 2/position" = Vector2(531, 191)
+transitions = ["idle4fall", "jump3down", SubResource("AnimationNodeStateMachineTransition_1p0xm"), "jump3down", "WalkRun", SubResource("AnimationNodeStateMachineTransition_eq737"), "WalkRun", "jump3down 2", SubResource("AnimationNodeStateMachineTransition_8p3km"), "jump3down 2", "idle4fall", SubResource("AnimationNodeStateMachineTransition_k4tqh"), "Start", "WalkRun", SubResource("AnimationNodeStateMachineTransition_qfywl")]
+graph_offset = Vector2(-40, -7)
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_i602r"]
+graph_offset = Vector2(-420.432, -25.357)
+nodes/CrouchIdleWalk/node = SubResource("AnimationNodeBlendSpace1D_hrc0h")
+nodes/CrouchIdleWalk/position = Vector2(-240, 280)
+nodes/CrouchStand/node = SubResource("AnimationNodeTransition_8covd")
+nodes/CrouchStand/position = Vector2(0, 220)
+nodes/MainState/node = SubResource("AnimationNodeStateMachine_kjveo")
+nodes/MainState/position = Vector2(-240, 500)
+nodes/output/position = Vector2(240, 220)
+node_connections = [&"output", 0, &"CrouchStand", &"CrouchStand", 0, &"MainState", &"CrouchStand", 1, &"CrouchIdleWalk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wh0lk"]
+radius = 0.365
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_px2ew"]
+radius = 0.365
+height = 1.5
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_hwwnj")
+player = null
+
+[node name="ServerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_fb1vy")
+
+[node name="PlayerInput" type="MultiplayerSynchronizer" parent="."]
+root_path = NodePath(".")
+replication_config = SubResource("SceneReplicationConfig_hoavk")
+script = ExtResource("2_ju3m6")
+
+[node name="Mesh" parent="." instance=ExtResource("3_k26qi")]
+transform = Transform3D(-0.999998, -0.00138138, 0.00135751, -0.0013829, 0.999998, -0.00111242, -0.00135597, -0.0011143, -0.999998, 0.00678962, 0.0083939, -0.0242674)
+
+[node name="MeshPlayer" type="AnimationPlayer" parent="Mesh"]
+libraries = {
+"": SubResource("AnimationLibrary_rde3y")
+}
+
+[node name="HeadBone" type="Node3D" parent="Mesh"]
+transform = Transform3D(1, -2.27828e-10, -4.65661e-10, -1.93268e-12, 1, 2.32831e-10, 2.32831e-10, 0, 1, -0.00211901, 1.5323, -0.00170457)
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendTree_i602r")
+anim_player = NodePath("../Mesh/MeshPlayer")
+active = true
+parameters/CrouchIdleWalk/blend_position = 0.0
+parameters/CrouchStand/current_state = "crouch_to_stand"
+parameters/CrouchStand/transition_request = ""
+parameters/CrouchStand/current_index = 0
+parameters/MainState/conditions/onAir = false
+parameters/MainState/conditions/onFloor = true
+parameters/MainState/WalkRun/blend_position = 0.0
+
+[node name="Systems" type="Node3D" parent="."]
+
+[node name="CheckFloor" type="RayCast3D" parent="Systems"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00510836, 0)
+target_position = Vector3(0, -0.5, 0)
+
+[node name="Camera" type="Node3D" parent="Systems"]
+script = ExtResource("21_0e8gg")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Systems/Camera"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35536, 0)
+spring_length = 2.0
+margin = 0.2
+
+[node name="TPC" type="Camera3D" parent="Systems/Camera/SpringArm3D"]
+unique_name_in_owner = true
+h_offset = 0.8
+v_offset = 0.25
+current = true
+near = 0.25
+
+[node name="FirstPersonCamera" type="Node3D" parent="Systems/Camera"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.999948, -0.0101751, 0, 0.0101751, 0.999948, 0, 1.38959, 0)
+
+[node name="BoneTransform" type="Node3D" parent="Systems/Camera/FirstPersonCamera"]
+transform = Transform3D(1, -1.11022e-16, 0, 0, 1, 9.31323e-10, 0, -9.31323e-10, 1, -3.55271e-15, -0.116957, 0.000978882)
+
+[node name="FPC" type="Camera3D" parent="Systems/Camera/FirstPersonCamera/BoneTransform"]
+unique_name_in_owner = true
+transform = Transform3D(-1, 9.99201e-16, -1.50996e-07, 7.77156e-16, 1, 9.31323e-10, 1.50996e-07, 9.31323e-10, -1, 0, -0.09, 0.23)
+current = true
+near = 0.25
+
+[node name="Transition" type="Node3D" parent="Systems/Camera"]
+
+[node name="FollowCamera" type="Camera3D" parent="Systems/Camera/Transition"]
+unique_name_in_owner = true
+
+[node name="CheckRayCast" type="Node3D" parent="Systems"]
+script = ExtResource("21_w777m")
+
+[node name="CrouchCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_wh0lk")
+disabled = true
+
+[node name="StandCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.00415, -0.000767909, -0.000914334, 0.0007715, 1.00415, 0.00395963, 0.000911305, -0.00396033, 1.00415, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_px2ew")
